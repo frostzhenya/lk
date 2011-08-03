@@ -5,81 +5,55 @@
 +--------------------------------------------------------+
 | Filename: index.php
 | Author: lovepsone
-| completed: 80%
+| completed: 0%
 +--------------------------------------------------------+
 | Removal of this copyright header is strictly prohibited 
 | without written permission from the original author(s).
 +--------------------------------------------------------*/
 
-	session_start();
-	error_reporting(E_ALL);	
-
-	require "config/config.php";
-	require "include/functions.php";
-	require "locale/language.php";
-
-	if(isset($_SESSION['login']))
-		{
-			Header('Location: '.$startmodule.'');
-		} 
-
-	if(!isset($_POST['login']))
-		{
-			$jmeno = addslashes(!empty($_POST['jmeno']));
-			$heslo = addslashes(!empty($_POST['heslo']));
-		}
-	else
-		{
-			$jmeno = addslashes($_POST['jmeno']);
-			$heslo = addslashes($_POST['heslo']);
-		}
-
-	if ($jmeno == "" || $heslo == "")
-		{
-			include ('templates/'.$them.'/topmenu.php');
-			$reason = $txt[1];
-		}
-	else
-		{
-			$jmeno = addslashes($_POST['jmeno']);
-			$heslo = addslashes($_POST['heslo']);
-			$jmeno = strtoupper($jmeno);
-			$heslo = strtoupper($heslo);
-			$heslo = sha_password($jmeno,$heslo);
-		
-			selectDb('realmd');
-			$sql="SELECT * FROM account WHERE username='".$jmeno."' AND sha_pass_hash='".$heslo."'";
-			$result = mysql_query($sql);
-			$vysledek = mysql_fetch_array($result);
-
-
-			if ($vysledek['username'] == "")
-
-				{
-    					include ('templates/'.$them.'/topmenu.php');
-    					$reason = "<font color=\"darkred\">$txt[2]</font>";
-				}
-
-			elseif ($vysledek['username'] != "")
-				{ 
-					$user = $vysledek['username'];
-					$_SESSION['loged'] = "ano";
-					$_SESSION['user'] = $vysledek['username'];
-					$_SESSION['id'] = $vysledek['id'];
-					Header('Location: '.$startmodule.'?id='.$vysledek[id].'');
-				}
-		}
-
-	echo"<img src='templates/$them/images/center-top.png'><br>";
-	echo"<table align='center' width='689' height='289' border='0' cellspacing='0' cellpadding='0'>";
-	echo"<tr><td width='383' height='289' class='center-left'>";
-	echo"<form action='$_SERVER[PHP_SELF]' method='POST' id='login'>";
-	echo"<p class='center-left-content'>$txt[3]<br><input type='text' class='input-center' name='jmeno'><br><br>$txt[4]<br>";
-	echo"<input type='password' class='input-center' name='heslo'><br><br>";
-	?><a href='#' onClick="document.getElementById('login').submit()" class="login" name="login" style="padding-left: 82px"></a><?php
-	echo"<td width='306' height='289' class='center-right' valign=top>";
-	echo"<p class='center-right-content'>$reason</p></td></tr></table>";
-	echo"<img src='templates/$them/images/center-buttom.png'><br></th></tr>";
- 
-	require "templates/$them/bottomline.php";	
+	include("conf.php");
+	include("lang/lang.php");
+	include("include/auth.php");
 ?>
+	<HTML>
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+	<HEAD><link rel="SHORTCUT ICON" href="images/favicon.ico"><TITLE>lk test_module</TITLE>
+	<META http-equiv="content-type" content="text/html; charset=cp1251" />
+	<LINK rel="stylesheet" href="lkstyle.css" type="text/css" />
+	</HEAD>
+	<BODY>
+<?php
+	if($toplinks=='on')
+		{
+			echo"<table width='100%' cellpadding='0' cellspacing='0' align='center'>";
+			echo"<tr><td style='background : url(templates/$them/images/top_bg.png); width: 100%; height: 26px' class=topnav>";
+
+			echo"<img src='templates/$them/images/topnav_div.gif'><a href='/'>На сайт</a>";
+			echo"<img src='templates/$them/images/topnav_div.gif'><a href='character.php?search=player'>Поиск игрока</a>";
+			echo"<img src='templates/$them/images/topnav_div.gif'><a href='guild.php'>Гильдии</a>";
+			echo"<img src='templates/$them/images/topnav_div.gif'><a href='playerservinfo.php?online' name='online'>Игроки Online</a>";
+			echo"<img src='templates/$them/images/topnav_div.gif'><a href='playerservinfo.php?top=money' name='top_money'>Toп богатейших игроков</a>";
+			echo"<img src='templates/$them/images/topnav_div.gif'><a href=''>Toп чести</a>";
+			echo"<img src='templates/$them/images/topnav_div.gif'><a href=''>Toп арена 2x2</a>";
+			echo"<img src='templates/$them/images/topnav_div.gif'><a href=''>Toп арена 3x3</a>";
+			echo"<img src='templates/$them/images/topnav_div.gif'><a href=''>Toп арена 5x5</a></td></tr></table>";
+
+		}
+
+	echo"<table width='100%' cellpadding='0' cellspacing='0' border='0' align='center'>";
+	echo"<tr><td colspan='3' style='height: 89px' valign=top><div class='logo'></div></td></tr>";
+	echo"<tr><td width='100%' height='86'></td></tr>";
+	echo"<tr><td colspan='3' align='center'>";
+
+	$templates = 'templates/'.$them.'/templates.php';
+	if (file_exists($templates)) include($templates);
+	else include('templates/default/templates.php');
+
+	echo"</td></tr></table>";
+
+	echo"<table width='100%' align='center'><tr><th colspan='3' align='center'><img src='templates/$them/images/table_spodek.jpg'></th></tr></table>";
+	echo"<table width='100%' align='center'>";
+	echo"<tr><td colspan='3' class='cop' background='templates/$them/images/bg_auhtor.png'>$cop</th></tr>";
+	echo"<tr><td colspan='3' class='cop' background='templates/$them/images/bg_auhtor.png'>$rev</th></tr></table>";
+?>
+</body></html>

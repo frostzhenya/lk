@@ -100,46 +100,6 @@
   
 		}
 
-	function char_racegender($race, $gender)
-		{ 
-          		$char_race = array( 
-              		1 => 'Human', 
-             		2 => 'orc', 
-              		3 => 'dwarf', 
-              		4 => 'nightelf', 
-              		5 => 'scourge', 
-              		6 => 'tauren', 
-              		7 => 'gnome', 
-              		8 => 'troll', 
-			9 => 'goblin',
-              		10 => 'bloodelf', 
-              		11 => 'draenei',
-			22 => 'worgen'); 
-                    
-         		$char_gender = array( 
-             		0 => 'мужчина', 
-             		1 => 'женщина'); 
-
-       			echo $char_race[$race].$char_gender[$gender]; 
-	   	}
-
-	function char_class($class)
-		{ 
-	    		$char_class = array( 
-       			1=>'Воин',
-	  		2=>'Паладин',
-	   		3=>'Охотник',
-	   		4=>'Разбойник',
-	   		5=>'Жрец',
-	   		6=>'Рыцарь смерти',
-	   		7=>'Шаман',
-	   		8=>'Маг',
-	   		9=>'Чернокнижник',
-	   		11=>'Друид'); 
-	   
-			echo $char_class[$class];
-		}
-
 	$number=10;
 	function generate($number){
     $arr = array('a','b','c','d','e','f',
@@ -188,80 +148,12 @@ function get_realmd(){
 	return($result);
 }
 
-$type_game = array(
-    0 => 'Normal',
-    1 => 'PVP',
-    4 => 'Normal',
-    6 => 'RP',
-    8 => 'RPPVP'
-);
-
 $temp=get_realmd();
 $type=$temp['icon'];
 $port=$temp['port'];
 $realm_type = $type_game[$type];
 $gen = "<meta name=\"Generator\" content=\"Personal Cabinet 1.5 Lite\">";
 
-
-	function getExpansion($typ)
-		{
-			switch ($typ):
-    			case 0:
-    			$typ = "World of Warcraft";
-   			break;
-
-    			case 1:
-    			$typ = "The Burning Crusade";
-   			break;
-
-  			case 2:
- 			$typ = "Wrath of the Lich King";
-   			break;
-
-  			endswitch;
-			return $typ;
-		}
-
-$rank_alliance = array(
-    0 => 'Нет звания',
-    1 => 'Private',
-    2 => 'Corporal',
-    3 => 'Sergeant',
-    4 => 'Master Sergeant',
-	5 => 'Sergeant Major',
-	6 => 'Knight',
-	7 => 'Knight-Lieutenant',
-	8 => 'Knight-Captain',
-	9 => 'Knight-Champion',
-	10 => 'Lieutenant Commander',
-	11 => 'Commander',
-	12 => 'Marshal',
-	13 => 'Field Marshal',
-	14 => 'Grand Marshal',
-	15 => 'City Protector'
-  );
-  
-$rank_horde = array(
-    	0 => 'Нет звания',
-	1 => 'Scout',
-	2 => 'Grunt',
-	3 => 'Sergeant',
-	4 => 'Senior Sergeant',
-	5 => 'First Sergeant',
-	6 => 'Stone Guard',
-	7 => 'Blood Guard',
-	8 => 'Legionnaire',
-	9 => 'Centurion',
-	10 => 'Champion',
-	11 => 'Lieutenant General',
-	12 => 'General',
-	13 => 'Warlord',
-	14 => 'High Warlord',
-	15 => 'City Protector'
-  );
-  
-
-  
 	function open()
 		{
 			$open = array('d293LmNsbi5ydQ==','d293Lmljbi5vZC51YQ==','Y29udHJvbC52aXJnaW4td293LnJ1','YmFja2tvci5ydQ==','d293LXdvcmxkLnJ1','Z2FtZXMucmlhbGNvbS5uZXQ=','d293Lmljbi5vZC51YQ==','d293bWFyeW5vLnJ1','d293LW5zay5ydQ==',);
@@ -282,27 +174,4 @@ $rank_horde = array(
 		{
 			return SHA1($jmeno.':'.$heslo);
 		}
-
-	function char_money($money)
-		{  
-			$g = floor( $money / (100*100) );
-			$money = $money - $g*100*100;
-			$s = floor( $money / 100 );
-			$money = $money - $s*100;
-			$c = floor( $money );
-			return sprintf("<b>%d<img src='images/gold.png'>&nbsp;%02d<img src='images/silver.png'>&nbsp;%02d<img src='images/copper.png'></b>", $g, $s, $c);
-		}
-
-	function char_totaltime($totaltime)
-		{
-			$d = floor($totaltime/(3600*24));
-			$totaltime = ($totaltime - $d*3600*24);
-			$h = floor($totaltime/3600);
-			$totaltime = ($totaltime - $h*3600);
-			$m = floor($totaltime/60);
-			$totaltime = ($totaltime - $m*60);
-			$sec = floor($totaltime);
-			return sprintf("{$d} д. {$h} ч. {$m} м. {$sec} c.");
-		}
-	
 ?>
