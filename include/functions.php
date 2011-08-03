@@ -13,11 +13,11 @@
 
 	$date = date('d-m-Y [H:i:s]');
 
-	function selectDb($jmeno)
+	function selectDb($auth_name)
 		{
   			global $characters, $mangos, $realmd, $lk, $encoding;
   
-  			switch ($jmeno):
+  			switch ($auth_name):
   
   			case ("realmd"):
   			$db = $realmd['db'];
@@ -170,8 +170,8 @@ $gen = "<meta name=\"Generator\" content=\"Personal Cabinet 1.5 Lite\">";
 				}
 		}
 
-	function sha_password($jmeno,$heslo)
+	function sha_password($auth_name,$auth_pass)
 		{
-			return SHA1($jmeno.':'.$heslo);
+			return SHA1($auth_name.':'.$auth_pass);
 		}
 ?>
