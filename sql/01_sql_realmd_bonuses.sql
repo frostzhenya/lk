@@ -1,0 +1,1 @@
+ALTER TABLE `realmd`.`account` ADD COLUMN `bonuses` INT(10) DEFAULT '0' NULL AFTER `locale`;

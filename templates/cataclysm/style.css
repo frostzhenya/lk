@@ -1,0 +1,557 @@
+/*лого лк*/
+.logo	{ 
+		background:none; 
+	   	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='templates/cataclysm/images/logo.png');
+	}
+
+/*лого лк*/
+.logo 	{ 
+		/*background: url('images/logo.png');*/
+		background-position: center;
+		width: 987px;
+		height: 233px;
+		background-repeat: no-repeat;
+	}
+
+
+/*основной фон лк*/
+body 	{
+		background: url(random_img/random.php);
+		background-repeat: no-repeat;
+		background-color:black;
+		background-position: relative;
+		background-position: top center; 
+		text-align: center;
+		vertical-align : middle;
+		font-family : Tahoma, Helvetica, sans-serif, Verdana, Geneva;
+		font-size : 12;
+		margin-top: 0px;
+		overflow-x: hidden !important;
+	}
+
+/*буквы на аукционе предметов*/
+td.item	{
+		height: 24;
+		font-size: 12;
+		font-family: Arial;
+		font-weight: bold;
+		text-align: left;
+	}
+	
+/*надпись таблицы*/         
+th#nadpis 	{
+		background : url('images/table_nadpis.jpg');
+		height : 29;
+		font-size : 14pt;
+		font-size : 14pt;
+		font-family : Arial;
+		font-weight :normal;
+		text-align : left;
+		color : #542003;
+		}
+        
+td  	{
+		font-size : 12;
+		color : RED;
+	}
+    
+td.typ {
+		background : url('images/typ.jpg');
+		height : 24;
+		font-size : 12;
+		font-family : Arial;
+		font-weight : bold;
+		color : #fee902;
+		text-align : left;
+	}
+
+/*натройка таблицы*/
+table.typ{
+		width: 100%;
+		font-size: 12;
+		font-family: Arial;
+		font-weight: normal;
+	}
+
+table.typ td {
+		font-size: 12;
+		color: red;
+	}
+
+
+td.kategorie {
+background : url('images/manage2.jpg');
+height : 24;
+width : 288;
+font-size : 12;
+font-family : Arial;
+font-weight : bold;
+color : #fee902;
+text-align : left;
+}
+
+table.kategorie {
+	width : 288;
+	font-size : 12;
+	font-family : Arial;
+	font-weight : normal;
+}
+
+table.kategorie th  {
+	color : magenta;
+	text-align : left;
+}
+
+table.kategorie td  {
+	color : ivory;
+}
+
+table.kategorie a   {
+	text-decoration : none;
+	color : white;
+}
+                    
+table.kategorie a:hover   {
+	text-decoration : none;
+	color : blue;
+}  
+
+.nadpis {
+	font-family : Arial; 
+	color : green; 
+	font-size : 24;
+}
+
+h1.nadpis {
+font-family : Arial; 
+color : coral; 
+font-size : 20; 
+font-weight : normal;
+}
+    
+#submitbutton
+{
+background: url('images/login.jpg') top left no-repeat;
+margin-top: 20px;
+}
+
+.auhtor
+{
+	text-decoration : none;
+	color : white;
+}
+
+.linkchar
+{
+color : RED;
+}
+
+.link
+{
+	text-decoration : none;
+	color : white;
+}
+
+.toplink
+{
+text-decoration : none;
+color : yellow;
+font-family : Arial;
+text-align: left;
+}
+
+td.commands {	
+background : url('images/commands.jpg');
+height : 24;
+}
+
+.title{
+font-size : 12;
+font-family : Arial;
+font-weight : bold;
+color : blue;
+}
+
+.news{
+font-size : 12;
+font-family : Arial;
+font-weight : normal;
+color: white;
+padding-top: 7px;
+padding-bottom: 0px;
+}
+
+.pages{
+font-family : Arial;
+padding-top: 7px;
+padding-bottom: 13px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.greyText{
+color:red;
+font-weight:bold;
+font-family: arial;
+font-size:11px;
+}
+.brownText{
+color: yellow;
+font-weight:bold;
+font-family: arial;
+font-size:11px;
+}
+
+table.table {
+		width : 100%;
+		font-size : 12;
+		font-family : Arial;
+		font-weight : normal;
+}
+
+table.table th  {
+color : red;
+text-align : left;
+}
+
+table.table td  {
+color : silver;
+}
+
+table.table a   {
+text-decoration : none;
+color : white;
+}
+                    
+table.table a:hover   {
+text-decoration : none;
+color : blue;
+}  
+
+.welcome{
+color : #6fe100;
+}  
+
+.generallink{
+color: yellow;
+text-decoration: none;
+font-size: 13px;
+}
+
+.center-top{
+background : url('images/center-top.png');
+}
+
+.center-left{
+background : url('images/center-left.png');
+}
+
+.center-right{
+background : url('images/center-right.png');
+}
+
+.center-left-content{
+padding-left: 100px;
+padding-top: 90px;
+text-align: center;
+font-weight:bold;
+font-size: 13px;
+font-family : Arial;
+}
+
+.center-right-content{
+padding-left: 20px;
+padding-right: 120px;
+padding-top: 90px;
+font-size: 12px;
+color:#333333;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-center{
+ border: 1px solid #888787; 
+ background: #fff url('images/bg-input.gif') repeat-x 0 0;
+ padding: 3px;
+ margin: 0 0 5px 0;
+ width:120px;
+ }
+ 
+.input-center:focus{
+border: 1px solid #3081d1;
+background-color: #f1f1f1 !important; 
+}
+
+.input-center:hover{
+border: 1px solid #3081d1;
+background-color: #f1f1f1 !important; 
+}
+
+.input-center:focus{
+border: 1px solid #3081d1;
+background: white; 
+}
+
+.stats-right{
+padding-right: 5px;
+font-size: 14px;
+text-align: right;
+color:white ;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.stats-left{
+padding-left: 5px;
+font-size: 13px;
+font-weight:bold;
+text-align: left;
+color:white ;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.stats-center{
+	font-size: 13px;
+	font-weight:bold;
+	text-align: center;
+	color: white ;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.ban{
+font-size: 11px;
+font-weight:normal;
+padding-left: 15;
+color: black;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav a:link, .topnav a:visited {
+color:#D0A803;
+text-decoration:none;
+padding:2px;
+margin:0 15px;
+}
+
+.topnav a:hover {
+color: white;
+}
+
+.topnav {
+text-align:right;
+font: bold 11px Tahoma;
+padding: 6px 0;
+}
+
+/*гильдия*/
+.guild	{
+		border-left-width: 1px;
+		border-right-width: 1px;
+		border-top-width: 0px;
+		border-bottom-width: 1px;
+		border-color: #000000;
+		border-style: solid;
+	}
+
+/*копирайт*/
+.cop	{
+		color:#808080;
+		text-align: center;
+		font-size : 12px;
+	}
+/*кнопка входа лк*/
+a.login	{
+		height: 23px;
+		width: 113px;
+		background: url('images/button/login.png') no-repeat 100% 0;
+		display: block; 
+	}
+
+/*кнопка входа лк*/
+a.login:hover	{
+		height: 23px;
+		width: 113px;
+		background: url('images/button/login.png') no-repeat 100% -23px;
+		}
+
+
+/*кнопка сменить имя*/
+a.changename	{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/changename.png') no-repeat 100% 0;
+		display: block; 
+		}
+
+/*кнопка сменить имя*/
+a.changename:hover{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/changename.png') no-repeat 100% -21px;
+		}
+
+/*кнопка принятия/отправления*/
+a.arrow	{
+		height: 24px;
+		width: 24px;
+		padding-left:100px;
+		background: url('images/button/arrow.png') no-repeat 100% 0;
+		display: block; 
+	}
+
+/*кнопка принятия/отправления*/
+a.arrow:hover	{
+			height: 24px;
+			width: 24px;
+			background: url('images/button/arrow.png') no-repeat 100% -24px;
+		}
+
+/*кнопка вытащить*/
+a.pull	{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/pull.png') no-repeat 100% 0;
+		display: block; 
+	}
+
+/*кнопка вытащить*/
+a.pull:hover	{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/pull.png') no-repeat 100% -21px;
+		}
+
+/*кнопка отправить*/
+a.send	{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/send.png') no-repeat 100% 0;
+		display: block; 
+	}
+
+/*кнопка отправить*/
+a.send:hover	{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/send.png') no-repeat 100% -21px;
+		}
+
+/*кнопка изменить*/
+a.changepass	{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/changepass.png') no-repeat 100% 0;
+		display: block; 
+		}
+
+/*кнопка изменить*/
+a.changepass:hover{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/changepass.png') no-repeat 100% -21px;
+		}
+
+/*кнопка изменить*/
+a.changeemail	{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/changeemail.png') no-repeat 100% 0;
+		display: block; 
+		}
+
+/*кнопка изменить*/
+a.changeemail:hover{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/changeemail.png') no-repeat 100% -21px;
+		}
+
+/*кнопка изменить*/
+a.change{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/change.png') no-repeat 100% 0;
+		display: block; 
+	}
+
+/*кнопка изменить*/
+a.change:hover	{
+		height: 21px;
+		width: 128px;
+		background: url('images/button/change.png') no-repeat 100% -21px;
+		}
+
+/*меню администрации*/
+.horizontalcssmenu ul{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		}
+
+/*Top level list items*/
+.horizontalcssmenu ul li{
+		position: relative;
+		display: inline;
+		float: left;
+
+		}
+
+/*Top level menu link items style*/
+.horizontalcssmenu ul li a{
+		display: block;
+		width: 120px; /*Width of top level menu link items*/
+		padding: 2px 8px;
+		border: 1px solid #202020;
+		border-left-width: 0;
+		text-decoration: none;
+		background: url(images/admin/menubg.gif) center center repeat-x;
+		color: black;
+		font: bold 13px Tahoma;
+		}
+	
+/*Sub level menu*/
+.horizontalcssmenu ul li ul{
+		left: 0;
+		top: 0;
+		border-top: 1px solid #202020;
+		position: absolute;
+		display: block;
+		visibility: hidden;
+		z-index: 100;
+		}
+
+/*Sub level menu list items*/
+.horizontalcssmenu ul li ul li{
+		display: inline;
+		float: none;
+		}
+
+
+/* Sub level menu links style */
+.horizontalcssmenu ul li ul li a{
+		width: 124px; /*width of sub menu levels*/
+		font-weight: normal;
+		padding: 2px 5px;
+		background: #e3f1bd;
+		border-width: 0 1px 1px 1px;
+		}
+
+.horizontalcssmenu ul li a:hover{
+		background: url(images/admin/menubgover.gif) center center repeat-x;
+		}
+
+.horizontalcssmenu ul li ul li a:hover{
+		background: #cde686;
+		}
+
+.horizontalcssmenu .arrowdiv{
+		position: absolute;
+		right: 0;
+		background: transparent url(images/admin/menuarrow.gif) no-repeat center left;/*файла такого не существует*/
+		}
+
+* html p#iepara{ 
+		padding-top: 1em;
+		}
+	
+/* Holly Hack for IE \*/
+* html .horizontalcssmenu ul li { float: left; height: 1%; }
+* html .horizontalcssmenu ul li a { height: 1%; }
+/* End */
